@@ -1,5 +1,7 @@
 # Endpoint Sentinel
 
+> **Warning:** Endpoint Sentinel is a prototype and does not provide antivirus protection or guarantee device safety. Review the [Terms and Software Disclaimer](TERMS.md) before use; continue using trusted endpoint protection such as Microsoft Defender.
+
 Windows-only, offline-first security companion prototype. This is a local C#/.NET solution with a WPF desktop client, a read-only Microsoft Defender status view, a shared test-marker scanner core, an optional Windows Service monitor, and a dependency-free focused test harness. It is not a replacement for Microsoft Defender, another security product, or professional incident response.
 
 ## Requirements and build
