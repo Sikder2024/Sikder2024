@@ -1,0 +1,4 @@
+Endpoint Sentinel harmless local test marker:
+ENDPOINT_SENTINEL_TEST_MARKER
+
+This is inert test data. It is not malware and must not be used as evidence that the scanner detects real threats.

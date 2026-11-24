@@ -1,0 +1,71 @@
+<Window x:Class="EndpointSentinel.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Endpoint Sentinel" Height="900" Width="1000" MinHeight="760" MinWidth="780"
+        Background="#F4F6FA">
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,18">
+            <TextBlock Text="Endpoint Sentinel" FontSize="28" FontWeight="SemiBold" Foreground="#182230" />
+            <TextBlock Text="Read-only Windows security companion · status is informative, not a protection guarantee."
+                       Margin="0,4,0,0" Foreground="#475467" TextWrapping="Wrap" />
+        </StackPanel>
+
+        <Border Grid.Row="1" Background="White" CornerRadius="8" Padding="16" Margin="0,0,0,14">
+            <StackPanel>
+                <DockPanel Margin="0,0,0,8">
+                    <Button Content="Open Windows Security" Click="OpenWindowsSecurity_Click"
+                            DockPanel.Dock="Right" Margin="8,0,0,0" />
+                    <Button x:Name="RefreshDefenderButton" Content="Refresh Defender status"
+                            Click="RefreshDefenderStatus_Click" DockPanel.Dock="Right" />
+                    <TextBlock Text="Microsoft Defender status" FontSize="16" FontWeight="SemiBold"
+                               VerticalAlignment="Center" />
+                </DockPanel>
+                <TextBlock x:Name="DefenderStatusText" Text="Not checked. Select Refresh Defender status to query this PC."
+                           AutomationProperties.LiveSetting="Polite" TextWrapping="Wrap" Foreground="#344054" />
+                <TextBlock Margin="0,8,0,0" TextWrapping="Wrap" Foreground="#475467"
+                           Text="Read-only status from Windows. This app does not change Defender settings; a successful status query is not a guarantee that the PC is safe." />
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="2" Background="White" CornerRadius="8" Padding="16" Margin="0,0,0,14">
+            <StackPanel>
+                <TextBlock Text="Harmless test-marker check (not a malware scan)" FontSize="16"
+                           FontWeight="SemiBold" Margin="0,0,0,8" />
+                <TextBlock Text="Directory to check for the app's documented test marker (reparse points are skipped; scan limits apply):"
+                           Foreground="#344054" Margin="0,0,0,6" />
+                <DockPanel>
+                    <Button x:Name="ScanButton" Content="Check for test marker" Click="ScanButton_Click"
+                            DockPanel.Dock="Right" Background="#155EEF" Foreground="White" />
+                    <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click"
+                            DockPanel.Dock="Right" IsEnabled="False" />
+                    <Button Content="Browse..." Click="BrowseFolder_Click"
+                            DockPanel.Dock="Right" Margin="0,0,8,0" />
+                    <TextBox x:Name="PathBox" MinHeight="36" Padding="8" VerticalContentAlignment="Center"
+                             AutomationProperties.Name="Directory path to scan" />
+                </DockPanel>
+                <ProgressBar x:Name="ScanProgressBar" Height="8" Margin="0,12,0,4" Minimum="0" Maximum="100" />
+                <TextBlock x:Name="StatusText" Text="Idle. No test-marker check has been run."
+                           AutomationProperties.LiveSetting="Polite" TextWrapping="Wrap" Foreground="#344054" />
+            </StackPanel>
+        </Border>
+
+        <TextBlock Grid.Row="3" Text="Test-marker report and local history" FontWeight="SemiBold"
+                   FontSize="16" Margin="2,0,0,8" />
+        <TextBox Grid.Row="4" x:Name="ReportBox" IsReadOnly="True" AcceptsReturn="True"
+                 VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                 TextWrapping="NoWrap" FontFamily="Consolas" FontSize="13" Padding="12"
+                 Background="White" AutomationProperties.Name="Scan findings, errors and recent scan history" />
+
+        <TextBlock Grid.Row="5" Margin="0,12,0,0" TextWrapping="Wrap" Foreground="#475467"
+                   Text="Endpoint Sentinel does not delete or quarantine files, execute or upload scanned content, or disable/interfere with Defender. Keep trusted endpoint protection enabled." />
+    </Grid>
+</Window>

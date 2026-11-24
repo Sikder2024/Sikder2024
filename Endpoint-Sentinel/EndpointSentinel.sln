@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndpointSentinel.Core", "src\EndpointSentinel.Core\EndpointSentinel.Core.csproj", "{359412F1-4B3D-4D47-9C4C-C6BAA8EF0D01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndpointSentinel.Desktop", "src\EndpointSentinel.Desktop\EndpointSentinel.Desktop.csproj", "{AFCA4EC3-9A2B-496B-8BB3-786B94C3D0C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndpointSentinel.Service", "src\EndpointSentinel.Service\EndpointSentinel.Service.csproj", "{8922D42C-DA3A-426B-8A2A-5A0231A634A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndpointSentinel.Tests", "tests\EndpointSentinel.Tests\EndpointSentinel.Tests.csproj", "{3A50C8D1-F613-4FE1-9ABA-5D2F42240435}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{359412F1-4B3D-4D47-9C4C-C6BAA8EF0D01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{359412F1-4B3D-4D47-9C4C-C6BAA8EF0D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{359412F1-4B3D-4D47-9C4C-C6BAA8EF0D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{359412F1-4B3D-4D47-9C4C-C6BAA8EF0D01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFCA4EC3-9A2B-496B-8BB3-786B94C3D0C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFCA4EC3-9A2B-496B-8BB3-786B94C3D0C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFCA4EC3-9A2B-496B-8BB3-786B94C3D0C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFCA4EC3-9A2B-496B-8BB3-786B94C3D0C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8922D42C-DA3A-426B-8A2A-5A0231A634A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8922D42C-DA3A-426B-8A2A-5A0231A634A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8922D42C-DA3A-426B-8A2A-5A0231A634A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8922D42C-DA3A-426B-8A2A-5A0231A634A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A50C8D1-F613-4FE1-9ABA-5D2F42240435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A50C8D1-F613-4FE1-9ABA-5D2F42240435}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A50C8D1-F613-4FE1-9ABA-5D2F42240435}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A50C8D1-F613-4FE1-9ABA-5D2F42240435}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
